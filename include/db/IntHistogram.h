@@ -10,7 +10,14 @@ namespace db {
      * A class to represent a fixed-width histogram over a single integer-based field.
      */
     class IntHistogram : public Histogram {
-        // TODO pa4.1: add private members
+    private:
+        int min;
+        int max;
+        int buckets;
+        int nTuple;
+        int width;
+        std::vector<int> histogram;
+
     public:
         /**
          * Create a new IntHistogram.
