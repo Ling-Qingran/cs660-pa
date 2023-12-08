@@ -16,7 +16,8 @@ namespace db {
         int buckets;
         int nTuple;
         int width;
-        std::vector<int> histogram;
+        int totalValues;
+        std::vector<int> bucketCounts;
 
     public:
         /**
@@ -69,6 +70,9 @@ namespace db {
          * @return A string describing this histogram, for debugging purposes
          */
         std::string to_string() const;
+
+        int getBucketIndex(int value) const;
+
     };
 }
 
